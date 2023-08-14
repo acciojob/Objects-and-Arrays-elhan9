@@ -1,63 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>JavaScript Array and Object Copy</title>
-</head>
-<body>
-  <!-- Your HTML content here -->
-
-  <script>
-    function deepCopy(obj) {
-      if (typeof obj !== 'object' || obj === null) {
-        return obj;
-      }
-
-      if (Array.isArray(obj)) {
-        const copyArr = [];
-        for (let i = 0; i < obj.length; i++) {
-          copyArr[i] = deepCopy(obj[i]);
-        }
-        return copyArr;
-      }
-
-      const copyObj = {};
-      for (const key in obj) {
-        if (obj.hasOwnProperty(key)) {
-          copyObj[key] = deepCopy(obj[key]);
-        }
-      }
-      return copyObj;
-    }
-
-    const players = ["John", "Bob", "Alice", "Poppy"];
-    const person = {
-      name: "John Doe",
-      age: 80,
-    };
-
-    // Task 1: Create a reference to the array players
-    const team = players;
-
-    // Task 2: Create a deep copy of the array players
-    const team1 = deepCopy(players);
-
-    // Task 3: Create a deep copy of the object person
-    const cap1 = deepCopy(person);
-
-    // Handle potential edge cases:
-    // In case the properties of the person object change
-    person.name = "Jane Doe"; // Example modification
-
-    // In case the elements of the players array change
-    players.push("Sam"); // Example modification
-
-    // Print the results to verify
-    console.log("Original players:", players);
-    console.log("Original person:", person);
-    console.log("team:", team);
-    console.log("team1:", team1);
-    console.log("cap1:", cap1);
-  </script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>I'm not a robot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- the entire body must be written by student -->
+    <script src="./script.js"></script>
+  </body>
 </html>
-
