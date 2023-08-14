@@ -14,20 +14,3 @@ const person = {
 
     // Task 3: Create a copy of the object person
     const cap1 = { ...person };
-
-    // Handle potential edge cases:
-    // In case the properties of the person object change
-    person.name = "Jane Doe"; // Example modification
-
-    // In case the elements of the players array change
-    players.push("Sam"); // Example modification
-
-    // Print the results to verify
-    console.log("Original players:", players);
-    console.log("Original person:", person);
-    console.log("team:", team);
-    console.log("team1:", team1);
-    console.log("cap1:", cap1);
-
-
-
